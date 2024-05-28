@@ -5,3 +5,11 @@ async function carregarNavbar() {
 }
 
 carregarNavbar();
+
+async function carregarFooter() {
+    const response = await fetch('footer.html');
+    const html = await response.text();
+    document.getElementById('footer-container').innerHTML = html;
+}
+
+carregarFooter();
